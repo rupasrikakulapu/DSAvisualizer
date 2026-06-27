@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Python Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="logo" onclick="showPage('home')">
+        <span class="logo-icon">🐍</span>
+        <span>DSA Python Visualizer</span>
+      </div>
+      <div class="nav-links">
+        <button class="nav-link active" id="nav-home"      onclick="showPage('home')">Home</button>
+        <button class="nav-link"        id="nav-linear"    onclick="showPage('linear')">Linear DS</button>
+        <button class="nav-link"        id="nav-nonlinear" onclick="showPage('nonlinear')">Non-Linear DS</button>
+        <button class="nav-link"        id="nav-practice"  onclick="showPage('linear')">Practice</button>
+        <button class="nav-link"        id="nav-about"     onclick="showPage('about')">About</button>
+      </div>
+      <div class="nav-actions">
+        <div class="search-bar">
+          <span>🔍</span>
+          <input type="text" id="searchInput" placeholder="Search DS…" oninput="handleSearch(this.value)">
+        </div>
+        <button class="btn-icon" onclick="toggleDark()" title="Toggle theme">🌙</button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="page-home"       class="page active"></div>
+  <div id="page-linear"     class="page"></div>
+  <div id="page-nonlinear"  class="page"></div>
+  <div id="page-visualizer" class="page"></div>
+  <div id="page-about"      class="page"></div>
+
+  <footer>
+    <p>🐍 <span>DSA Python Visualizer</span> — Learn, Practice and Visualize Data Structures</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
